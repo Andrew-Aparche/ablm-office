@@ -8,66 +8,56 @@ Claude Code와 Codex에서 쓰는 플러그인입니다. 아이와 어르신이 
 
 ## 1. 처음 한 번 준비해 주세요
 
-- **Mac 또는 Windows PC**와 인터넷, 최신 브라우저가 필요합니다. 오피스는 PC에서 실행합니다. 켜 둔 뒤에는 같은 와이파이의 휴대폰·태블릿에서도 볼 수 있습니다(4단계).
-- **Claude Code** 또는 **Codex** 중 한쪽을 준비합니다. 없다면 [Claude 공식 설치 안내](https://code.claude.com/docs/en/setup) / [Codex 공식 설치 안내](https://learn.chatgpt.com/docs/cli)를 따라 한쪽만 설치하세요. 오피스 안에서 다른 엔진도 나중에 준비할 수 있습니다.
-- **Node.js 20 이상**이 필요합니다. [Node.js 다운로드](https://nodejs.org/en/download)에서 **LTS**를 고르고, Mac은 `.pkg`, Windows는 `.msi` 설치 파일을 받아 안내대로 설치합니다.
-- **Git**이 필요합니다. [Mac 설치 안내](https://git-scm.com/download/mac) / [Windows 설치 안내](https://git-scm.com/download/win)를 참고합니다. GitHub 계정은 없어도 됩니다.
+대표님, **Mac 또는 Windows PC**에서 평소 쓰는 AI 앱을 열어 주세요. 로그인되어 있다면 그대로 쓰시면 됩니다.
 
-**명령을 쓰는 창 열기:** Mac은 `⌘ + Space` → `터미널` 검색 → Enter, Windows는 시작 메뉴 → `PowerShell` 검색 → 열기입니다. 관리자 권한은 필요 없습니다. 아래 회색 상자에서 한 줄씩 복사해 붙여 넣고 Enter를 누르세요. 명령 앞에 `$` 같은 기호를 덧붙이지 않습니다.
+- **Codex 데스크탑 앱** 또는 **Claude 데스크탑 앱의 Code 화면** 중 하나를 사용합니다. 없다면 [Codex 앱 안내](https://developers.openai.com/codex/app/) / [Claude 앱 안내](https://code.claude.com/docs/en/desktop)를 따라 설치해 주세요.
+- **Node.js 20 이상**이 필요합니다. 없으면 [Node.js 다운로드](https://nodejs.org/en/download)에서 **LTS**를 골라 설치 파일을 열고 안내대로 설치해 주세요. 끝나면 AI 앱을 완전히 껐다 다시 엽니다.
+- **Git**이 없다는 안내가 나오면 [Mac 설치 안내](https://git-scm.com/download/mac) / [Windows 설치 안내](https://git-scm.com/download/win)를 도와주시는 분과 확인해 주세요. GitHub 계정은 필요 없습니다.
 
-```sh
-node --version
-git --version
-```
-
-`v24...`, `git version ...`처럼 버전이 나오면 준비됐습니다. 찾을 수 없다고 나오면 설치 후 창을 완전히 닫았다 다시 여세요.
+아래 과정은 앱 화면에서 진행합니다. 따로 명령을 복사해 실행하지 않습니다. 준비 여부는 오피스를 열 때 AI가 확인합니다.
 
 ## 2. 쓰는 AI 한쪽에 오피스 설치하기
 
-아래 **A 또는 B 중 한쪽만** 진행합니다. Mac의 터미널과 Windows PowerShell에서 같은 명령을 사용합니다. 저장소를 따로 내려받거나 `npm install`을 실행할 필요는 없습니다.
+**A 또는 B 중 한쪽만** 진행해 주세요. 버튼 이름과 위치는 앱의 버전·언어에 따라 조금 다를 수 있습니다.
 
-### A. Claude Code를 쓴다면
+### A. Claude 앱을 쓴다면
 
-```sh
-claude plugin marketplace add Andrew-Aparche/ablm-office
-claude plugin install ablm-office@ablm-agent-os
-claude
-```
+1. Claude 앱에서 **Code** 화면을 열고 **이 PC에서 실행하는 대화**를 선택합니다.
+2. 입력창 옆 **+ → Add plugins**를 누릅니다. **Plugins**가 보이면 **Plugins → Browse plugins**를 누릅니다.
+3. 마켓플레이스 추가 화면이 보이면 아래 주소를 넣습니다.
 
-첫 명령에 `Successfully added marketplace: ablm-agent-os`가 나오면 등록됐습니다. Claude 대화가 열리면 **새 대화**에 아래를 입력하세요.
+   ```text
+   Andrew-Aparche/ablm-office
+   ```
 
-```text
-/ablm-office
-```
+   **추가 화면이 없으면** 그 대화창에 아래 문장을 그대로 보내 주세요. Claude가 설치 명령을 실행해도 되는지 허락 창을 띄우면, 내용을 확인하고 **허용**을 누릅니다. 대표님이 다른 창을 열 필요는 없습니다.
 
-명령이 보이지 않으면 `에이블램 오피스 열어줘`라고 말합니다. 오피스 전용 도구 연결·실행 승인이 나오면 내용을 읽고 허용하세요. 웹 브라우저에 오피스가 열립니다.
+   ```text
+   에이블램 오피스 플러그인을 설치해 줘. 마켓플레이스는 Andrew-Aparche/ablm-office, 플러그인은 ablm-office@ablm-agent-os야.
+   ```
 
-### B. Codex를 쓴다면
+4. **에이블램 에이전트OS 오피스**를 찾아 내용을 확인하고 **설치**를 누릅니다. 설치 범위는 대표님 계정으로 선택합니다.
+5. **새 대화**를 열고 **에이블램 오피스 열어줘**라고 보내 주세요. 허락 창이 나오면 내용을 확인한 뒤 **허용**을 누릅니다.
 
-```sh
-codex plugin marketplace add Andrew-Aparche/ablm-office
-codex plugin add ablm-office@ablm-agent-os
-```
+Claude의 앱 내 플러그인 설치는 [공식 안내](https://code.claude.com/docs/en/desktop#install-plugins)에 있습니다. **이 오피스의 마켓플레이스 추가부터 첫 실행까지 앱에서 진행하는 과정(대화로 설치를 부탁하는 방법 포함)은 아직 실기 미검증**입니다. 일반 채팅·Cowork 화면과 Code 화면은 다릅니다.
 
-설치가 끝나면 **오피스를 여닫는 도구를 한 번 연결**합니다. 이 단계는 사용자가 직접 실행하고 동의합니다.
+### B. Codex 앱을 쓴다면
 
-Mac 터미널:
+1. 앱의 **플러그인** 화면에서 **마켓플레이스 추가**를 선택하고 아래 주소를 넣습니다. 이미 추가했다면 이 단계는 건너뜁니다.
 
-```sh
-node "$(find "${CODEX_HOME:-$HOME/.codex}/plugins/cache/ablm-agent-os/ablm-office" -path '*/bin/setup-codex.mjs' | sort -V | tail -1)"
-```
+   ```text
+   Andrew-Aparche/ablm-office
+   ```
 
-Windows PowerShell:
+2. **에이블램 에이전트OS 오피스 → 설치**를 누릅니다. 설치 후 켜져 있는지도 확인합니다.
+3. **새 대화**를 누릅니다. 방금 설치했던 대화에서는 새 기능이 아직 안 보일 수 있습니다.
+4. **에이블램 오피스 열어줘**라고 보내 주세요. `/ablm-office`를 선택할 수 있으면 선택해도 됩니다.
+5. 앱에 허락 창이 나오면 오피스 실행 내용인지 확인하고 **허용**을 누릅니다. **항상 허용**이 실제로 보일 때만, 이 오피스에 한정된 허락임을 확인한 뒤 선택하셔도 됩니다. 이번만 허용해도 됩니다.
+6. 브라우저에서 오피스가 열리면 끝입니다. 자동으로 안 열리면 대화에 나온 전체 주소를 눌러 주세요.
 
-```powershell
-$officeCodexHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { "$env:USERPROFILE\.codex" }
-$officeSetup = Get-ChildItem "$officeCodexHome\plugins\cache\ablm-agent-os\ablm-office\*\bin\setup-codex.mjs" | Where-Object { $_.Directory.Parent.Name -match '^\d+\.\d+\.\d+$' } | Sort-Object { [version]$_.Directory.Parent.Name } -Descending | Select-Object -First 1
-if ($officeSetup) { node $officeSetup.FullName } else { Write-Host "플러그인이 설치됐는지 먼저 확인해 주세요." }
-```
+한 번 더 실행 허락을 요청받으면 **이번만 허용**을 누릅니다. 연결 파일을 따로 실행할 필요는 없습니다. 허락 창 없이 막히면 **플러그인**에서 오피스를 확인하고 **새 대화**에서 다시 부탁해 주세요. 계속 막히면 오류 문구를 도와주시는 분께 보여 주세요.
 
-`에이블램 오피스를 열고 닫는 전용 도구를 연결할까요?`가 나오면 **예**를 입력하고 Enter를 누릅니다. `연결했어요`가 나오면 끝입니다. 셸·네트워크의 전체 권한을 여는 설정은 하지 않습니다.
-
-터미널에서 `codex`를 실행하거나 Codex 앱에서 **새 대화**를 열어 `/ablm-office`를 입력합니다. 명령이 보이지 않으면 `ablm-office 스킬로 오피스 열어줘`라고 말하세요. 웹 브라우저에 오피스가 열립니다.
+[공식 안내](https://learn.chatgpt.com/docs/plugins)는 설치 후 새 대화를 권장합니다. **Windows 앱에서 이 오피스를 처음부터 끝까지 여는 과정은 아직 실기 미검증**이며, 조직에서 차단한 경우 담당자에게 문의해 주세요.
 
 ## 3. 회사 세우기 → 사원증 발급
 
@@ -97,8 +87,8 @@ if ($officeSetup) { node $officeSetup.FullName } else { Write-Host "플러그인
 | 직원이 **입사 대기** | 위쪽 **🪪 사원증**에서 해당 엔진의 **시작**을 누릅니다. 로그인 승인 후 확인까지 끝내세요. |
 | 휴대폰에서 QR 주소가 안 열림 | 휴대폰과 PC가 같은 와이파이인지, 방화벽 창에서 **허용**했는지 확인합니다. 학교·카페·회사 공용 와이파이는 기기끼리 연결을 막는 경우가 많아 안 될 수 있습니다(집 공유기나 휴대폰 핫스팟으로 시도). |
 | 휴대폰에 “QR 코드를 다시 찍어 주세요” | 휴대폰 연결이 꺼졌거나 서버가 다시 시작됐습니다. PC에서 다시 켜고 새 QR을 찍습니다. |
-| `/ablm-office`가 안 보임 | 설치한 쪽의 **새 대화**를 엽니다. Codex는 전용 도구 연결도 확인합니다. |
-| `node`를 찾을 수 없음 | Node.js LTS 설치 후 터미널과 Claude/Codex 앱을 완전히 닫았다 다시 엽니다. |
+| `/ablm-office`가 안 보임 | 설치한 앱에서 **새 대화**를 열고 **에이블램 오피스 열어줘**라고 보내 주세요. |
+| `node`를 찾을 수 없음 | Node.js LTS 설치 후 Claude/Codex 앱을 완전히 닫았다 다시 엽니다. |
 | 그 밖의 오류 | **자세히 보기**의 문구와 문제 시각을 전달합니다. 접속 토큰·로그인 코드·인증 파일은 가리고 보내세요. |
 
 ## 6. 자료와 권한
@@ -111,30 +101,11 @@ if ($officeSetup) { node $officeSetup.FullName } else { Write-Host "플러그인
 
 ## 7. 지우기
 
-먼저 **“오피스 닫아줘”**로 종료하고, 설치한 쪽의 명령만 터미널/PowerShell에서 실행합니다.
+먼저 앱 대화에서 **오피스 닫아줘**라고 말해 주세요. 그다음 설치한 앱의 **플러그인** 화면에서 오피스를 선택하고 **제거**를 누릅니다. 조직에서 설치한 항목이라 제거 버튼이 없으면 담당자에게 문의해 주세요.
 
-Claude Code:
+예전 안내로 별도 연결을 해 두신 분은 도와주시는 분께 남은 연결도 정리해 달라고 부탁해 주세요. 로그인은 지울 필요가 없습니다.
 
-```sh
-claude plugin uninstall ablm-office@ablm-agent-os
-claude plugin marketplace remove ablm-agent-os
-```
-
-Codex:
-
-```sh
-codex plugin remove ablm-office@ablm-agent-os
-codex plugin marketplace remove ablm-agent-os
-```
-
-Codex에서 전용 도구를 연결했다면 `~/.codex/config.toml`(Windows: `%USERPROFILE%\.codex\config.toml`)에 아래 두 줄이 남아 있는지 확인하고, **남아 있을 때만** 백업한 뒤 지웁니다. 다른 설정은 지우지 않습니다.
-
-```toml
-[plugins."ablm-office@ablm-agent-os".mcp_servers."ablm-office-launcher".tools.office]
-approval_mode = "approve"
-```
-
-바탕화면의 오피스 바로가기는 직접 휴지통으로 옮깁니다. 결과물은 `AblmOffice`에 남습니다. 필요하다면 먼저 백업하고, 자료까지 지울 때만 그 폴더를 직접 삭제하세요.
+바탕화면의 오피스 아이콘은 직접 휴지통으로 옮깁니다. 결과물은 `AblmOffice`에 남습니다. 필요하다면 먼저 백업하고, 자료까지 지울 때만 그 폴더를 직접 삭제해 주세요.
 
 ## 라이선스
 

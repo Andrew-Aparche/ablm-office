@@ -1,6 +1,6 @@
 {
   "name": "ablm-office",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "에이블램 에이전트OS 오피스 — AI 직원 6명이 일하는 오피스를 로컬 브라우저에 띄웁니다.",
   "author": {
     "name": "JY.Andrew LEE"
@@ -9,7 +9,7 @@
   "mcpServers": {
     "ablm-office-launcher": {
       "command": "node",
-      "args": ["${PLUGIN_ROOT}/bin/launcher-mcp.mjs"],
+      "args": ["${PLUGIN_ROOT}/launcher/launcher-mcp.mjs"],
       "env_vars": ["ABLM_HOME", "ABLM_OFFICE_NO_OPEN"]
     }
   },

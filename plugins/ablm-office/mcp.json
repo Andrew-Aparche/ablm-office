@@ -4,7 +4,7 @@
     "ablm-office-launcher": {
       "type": "stdio",
       "command": "node",
-      "args": ["${PLUGIN_ROOT}/bin/launcher-mcp.mjs"]
+      "args": ["${PLUGIN_ROOT}/launcher/launcher-mcp.mjs"]
     }
   }
 }

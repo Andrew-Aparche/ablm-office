@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ablm-office",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "에이블램 에이전트OS 오피스 — 로컬 오피스 열기·확인·닫기",
   "author": { "name": "JY.Andrew LEE" },
   "extensions": {

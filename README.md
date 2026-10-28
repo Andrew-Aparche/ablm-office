@@ -39,7 +39,7 @@ Claude Code와 Codex에서 쓰는 플러그인입니다. 아이와 어르신이 
 4. **에이블램 에이전트OS 오피스**를 찾아 내용을 확인하고 **설치**를 누릅니다. 설치 범위는 대표님 계정으로 선택합니다.
 5. **새 대화**를 열고 **에이블램 오피스 열어줘**라고 보내 주세요. 허락 창이 나오면 내용을 확인한 뒤 **허용**을 누릅니다.
 
-Claude의 앱 내 플러그인 설치는 [공식 안내](https://code.claude.com/docs/en/desktop#install-plugins)에 있습니다. **이 오피스의 마켓플레이스 추가부터 첫 실행까지 앱에서 진행하는 과정(대화로 설치를 부탁하는 방법 포함)은 아직 실기 미검증**입니다. 일반 채팅·Cowork 화면과 Code 화면은 다릅니다.
+Claude 앱의 **Customize → Plugins → Add → Add marketplace**에서 `Andrew-Aparche/ablm-office`를 추가해도 됩니다. 이렇게 추가한 플러그인도 **Code** 화면에서 씁니다(일반 채팅에서는 오피스를 열 수 없습니다). Claude의 앱 내 플러그인 설치는 [공식 안내](https://code.claude.com/docs/en/desktop#install-plugins)에 있습니다. **이 오피스의 마켓플레이스 추가부터 첫 실행까지 앱에서 진행하는 과정(대화로 설치를 부탁하는 방법 포함)은 아직 실기 미검증**입니다. 일반 채팅·Cowork 화면과 Code 화면은 다릅니다.
 
 ### B. Codex 앱을 쓴다면
 

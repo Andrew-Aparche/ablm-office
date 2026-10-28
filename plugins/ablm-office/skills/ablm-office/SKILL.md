@@ -49,14 +49,14 @@ Codex 대화형 호스트에서는 별도 `approval_mode="approve"` 설정 없�
 
 ## 3. 설치된 런처로 실행하는 대안 (에이전트만 실행)
 
-런처 경로는 이 SKILL.md의 절대 경로에서 `skills/ablm-office/SKILL.md`를 떼어낸 폴더 + `bin/launch.mjs`다.
-Claude Code에서는 `${CLAUDE_PLUGIN_ROOT}/bin/launch.mjs`도 사용할 수 있다.
+런처 경로는 이 SKILL.md의 절대 경로에서 `skills/ablm-office/SKILL.md`를 떼어낸 폴더 + `launcher/launch.mjs`다.
+Claude Code에서는 `${CLAUDE_PLUGIN_ROOT}/launcher/launch.mjs`도 사용할 수 있다.
 파일 존재를 확인하고 공백·한글이 있는 경로도 인수 하나가 되도록 따옴표로 감싼다. 아래 예시 경로를 그대로 실행하지 않는다.
 
 ```sh
-node "<plugin-root>/bin/launch.mjs"
-node "<plugin-root>/bin/launch.mjs" --status
-node "<plugin-root>/bin/launch.mjs" --stop
+node "<plugin-root>/launcher/launch.mjs"
+node "<plugin-root>/launcher/launch.mjs" --status
+node "<plugin-root>/launcher/launch.mjs" --stop
 ```
 
 위 세 줄은 각각 열기·상태·닫기 중 **요청한 하나만** 실행한다.
@@ -92,7 +92,7 @@ Node.js를 대신 설치하거나 설치기를 자동 실행하지 않는다.
 
 ## CLI/자동 실행(`codex exec`)용 선택 사항
 
-`bin/setup-codex.mjs`는 비대화형 실행에서 승인 창을 받을 수 없는 운영자를 위한 선택 도구다. 데스크탑 설치·첫 실행의 필수 단계가 아니다.
+`launcher/setup-codex.mjs`는 비대화형 실행에서 승인 창을 받을 수 없는 운영자를 위한 선택 도구다. 데스크탑 설치·첫 실행의 필수 단계가 아니다.
 이 도구는 명시적으로 동의한 경우에만 사용자 설정의 `office` 한 개에 `approval_mode="approve"`를 저장한다.
 현재 흐름에서는 에이전트가 설정 프로그램을 실행하거나 동의 문자를 대신 입력하지 않는다. 운영자가 CLI 자동 실행을 별도로 요청할 때만 기술 안내를 제공한다.
 `codex exec`의 `never` 승인 오류를 대화형 앱에서도 불가능하다는 증거로 취급하지 않는다.

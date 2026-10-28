@@ -1,0 +1,19 @@
+{
+  "name": "ablm-agent-os",
+  "description": "에이블램 에이전트OS — AI 직원들이 일하는 오피스를 로컬 브라우저에 띄우는 플러그인 마켓플레이스",
+  "owner": {
+    "name": "JY.Andrew LEE"
+  },
+  "plugins": [
+    {
+      "name": "ablm-office",
+      "description": "에이블램 에이전트OS 오피스 — AI 직원 6명이 일하는 오피스를 로컬 브라우저에 띄웁니다 (/ablm-office).",
+      "version": "0.1.0",
+      "source": "./plugins/ablm-office",
+      "category": "productivity",
+      "author": {
+        "name": "JY.Andrew LEE"
+      }
+    }
+  ]
+}

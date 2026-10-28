@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "ablm-office-launcher": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/bin/launcher-mcp.mjs"]
+    }
+  }
+}

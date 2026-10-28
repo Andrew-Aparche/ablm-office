@@ -1,0 +1,20 @@
+{
+  "name": "ablm-agent-os",
+  "interface": {
+    "displayName": "에이블램 에이전트OS"
+  },
+  "plugins": [
+    {
+      "name": "ablm-office",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ablm-office"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
